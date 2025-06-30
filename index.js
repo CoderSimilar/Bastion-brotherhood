@@ -18,7 +18,7 @@ const jsonData = JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'))
 const mdContent = ['# Bastion Brotherhood']
 Object.keys(jsonData).forEach((name) => {
   const member = jsonData[name]
-  mdContent.push(`### <img src="${member.avator}" alt="${member.realname}" width="36"/> ${member.realname} `)
+  mdContent.push(`### <img src="${member.avatar}" alt="${member.realname}" width="36"/> ${member.realname} `)
 })
 fs.writeFileSync(mdFilePath, mdContent.join('\n'), 'utf8')
 console.log(`Markdown file created at ${mdFilePath}`)
